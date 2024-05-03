@@ -1,0 +1,400 @@
+{
+	"info": {
+		"_postman_id": "8acbe93d-1995-47e7-804f-26f80ab2a07b",
+		"name": "Catering",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10663396"
+	},
+	"item": [
+		{
+			"name": "Get Categories",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"uuid": "b3ec8511-5e21-4b50-bb07-48044fcb7b6e",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/categories?includeRelatedEntities=true",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"categories"
+					],
+					"query": [
+						{
+							"key": "includeRelatedEntities",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/categories/d4a53f69-8782-435a-9cbe-37157f8a341b?includeRelatedEntities=true",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"categories",
+						"d4a53f69-8782-435a-9cbe-37157f8a341b"
+					],
+					"query": [
+						{
+							"key": "includeRelatedEntities",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Beef\",\r\n    \"photoUrl\": \"https://images.unsplash.com/photo-1613454320437-0c228c8b1723?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/categories",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Category",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"\",\r\n    \"name\": \"Beef update\",\r\n    \"photoUrl\": \"https://images.unsplash.com/photo-1615937691194-97dbd3f3dc29?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/categories",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Category",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/categories/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products?includeRelatedEntities=true",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "includeRelatedEntities",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products/de03072f-750e-48e1-9841-04ef676baa9e?includeRelatedEntities=true",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"de03072f-750e-48e1-9841-04ef676baa9e"
+					],
+					"query": [
+						{
+							"key": "includeRelatedEntities",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Chicken Salad\",\r\n    \"Description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum purus eget nibh lobortis\",\r\n    \"price\": 18,\r\n    \"photoUrl\": \"https://images.unsplash.com/photo-1604909052743-94e838986d24?q=80&w=2756&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\r\n    \"calories\": 450,\r\n    \"protein\": 30,\r\n    \"carbs\": 35,\r\n    \"fat\": 20,\r\n    \"categoryId\": \"d4a53f69-8782-435a-9cbe-37157f8a341b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/products",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"\",\r\n    \"name\": \"Chicken Salad update\",\r\n    \"Description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum purus eget nibh lobortis\",\r\n    \"price\": 28,\r\n    \"photoUrl\": \"https://images.unsplash.com/photo-1604909052743-94e838986d24?q=80&w=2756&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\r\n    \"calories\": 500,\r\n    \"protein\": 30,\r\n    \"carbs\": 35,\r\n    \"fat\": 20,\r\n    \"categoryId\": \"d4a53f69-8782-435a-9cbe-37157f8a341b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/products",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/orders?includeRelatedEntities=true",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "includeRelatedEntities",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/orders/?includeRelatedEntities=true",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"orders",
+						""
+					],
+					"query": [
+						{
+							"key": "includeRelatedEntities",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"OrderDate\" : \"2024-05-02T20:00:00Z\",\r\n    \"IsDelivered\": false,\r\n    \"TotalAmount\": 49.00,\r\n    \"DeliveryAddress\" : {\r\n        \"City\": \"Random city\",\r\n        \"StreetAddress\": \"Some random street\",\r\n        \"StreetNumber\": 999\r\n    },\r\n    \"OrderItems\" : [\r\n        {\r\n            \"ProductId\": \"de03072f-750e-48e1-9841-04ef676baa9e\",\r\n            \"Quantity\": \"2\"\r\n        },\r\n         {\r\n            \"ProductId\": \"b1c164ca-b228-434e-8129-920a8cc0b4ec\",\r\n            \"Quantity\": \"1\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/orders",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"\",\r\n    \"OrderDate\" : \"2024-05-03T20:00:00Z\",\r\n    \"IsDelivered\": true,\r\n    \"TotalAmount\": 49.00,\r\n    \"DeliveryAddress\" : {\r\n        \"id\": \"\",\r\n        \"City\": \"Random city updated\",\r\n        \"StreetAddress\": \"Some random street updated\",\r\n        \"StreetNumber\": 999\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/orders",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/orders/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://localhost:7062/api",
+			"type": "string"
+		}
+	]
+}
